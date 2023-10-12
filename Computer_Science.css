@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+.wrapper{
+    background: darkslategrey;
+    position: fixed;
+    width: 100%;
+}
+.wrapper nav{
+    position: relative;
+    display: flex;
+    max-width: calc(100% - 200px);
+    margin: 0 auto;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .header {
+    display: flex;
+    align-items: center;
+}
+nav .header .links{
+    margin-left: 80px;
+    display: flex;
+}
+.header .logo a {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+}
+.header .links li{
+    list-style: none;
+    line-height: 70px;
+}
+.header .links li a,
+.header .links li label{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 9px 17px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.header .links li a:hover,
+.header .links li label:hover{
+    background: rgb(151, 151, 151);
+}
+.wrapper .search-icon,
+.wrapper .menu-icon{
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    line-height: 70px;
+    width: 70px;
+    text-align: center;
+}
+.wrapper .menu-icon{
+    display: none;
+}
+.wrapper #show-search:checked .search-icon i::before{
+    content: "\2716";
+}
+.wrapper .search-box{
+    position: absolute;
+    height: 100%;
+    max-width: calc(100% - 50px);
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.wrapper #show-search:checked ~ .search-box{
+    opacity: 1;
+    pointer-events: auto;
+}
+.search-box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    color: black;
+    background: white;
+    padding: 0 100px 0 15px;
+}
+.search-box input::placeholder{
+    color: rgb(101, 101, 101);
+}
+.search-box .search-icon{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 60px;
+    width: 70px;
+    background: rgb(63, 63, 63);
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.wrapper input[type="checkbox"]{
+    display: none;
+}
+.header img{
+    width: 200px;
+}
+/* Dropdown menu styles */
+nav .header .dropdown-links {
+    position: absolute;
+    width: 240px;
+    top: 100%;
+    left: 400px;
+    background: darkslategrey;
+    display: none;
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.header .links li:hover .dropdown-links {
+    display: block;
+    opacity: 1;
+}
+
+.header .links li ul li {
+    margin: 0;
+}
+
+.header .links li ul li a {
+    line-height: 40px;
+    font-size: 16px;
+    padding: 8px 18px;
+    display: block;
+}
+
+/*responsive code start*/
+
+@media screen and (max-width: 1250px){
+    .wrapper nav{
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    nav .header .links{
+        margin-left: 30px;
+    }
+    .header .links li a{
+        padding: 8px 13px;
+    }
+    .wrapper .search-box{
+        max-width: calc(100% - 100px);
+    }
+    .wrapper .search-box input{
+        padding: 0 100px 0 15px;
+    }
+}
+@media screen and (max-width: 900px){
+    .wrapper .menu-icon{
+        display: block;
+    }
+    .wrapper #show-menu:checked ~ .menu-icon i::before{
+        content: "\2716";
+    }
+    nav .header .links{
+        display: block;
+        position: fixed;
+        background-color: darkslategrey;
+        height: 100%;
+        width: 100%;
+        top: 70px;
+        left: -100%;
+        margin-left: 0;
+        max-width: 350px;
+        overflow: auto;
+        padding-bottom: 100px;
+        transition: all 0.3s ease;
+    }
+    nav #show-menu:checked ~ .header .links{
+        left: 0%;
+    }
+    .header .links li{
+        margin: 15px 20px;
+    }
+    .header .links li a,
+    .header .links li label{
+        line-height: 40px;
+        font-size: 20px;
+        display: block;
+        padding: 8px 18px;
+        cursor: pointer;
+    }
+    .header .links li a .desktop-link{
+        display: none;
+    }
+    /* Display dropdown */
+
+    nav .header .dropdown-links {
+        margin-left: 20px;
+        margin-top: 1px;
+        width: 100%; 
+        position: static; 
+        display: none;
+        padding: 0; 
+        opacity: 1; 
+    }
+    .header .links li:hover .dropdown-links {
+        display: block;
+    }
+}
+
+/* Add your CSS styles here */
+
+.elementor-section-wrap {
+    margin: 0;
+    padding: 0;
+}
+
+.elementor-section {
+    margin: 0;
+    padding: 0;
+}
+
+.elementor-container {
+    color:black;
+    line-height: 80px;
+    margin: 0;
+    padding: 0;
+}
+
+.elementor-column {
+    margin: 0;
+    padding: 0;
+}
+
+.elementor-widget-wrap {
+    background-image: url('https://foc.kdu.ac.lk/wp-content/uploads/2021/11/foc-4.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   background-size:contain;
+   
+    margin: 0;
+    padding: 0;
+    
+}
+
+.elementor-heading-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.elementor-button-link {
+    text-decoration: none;
+}
+
+.elementor-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.elementor-button:hover {
+    background-color: #005bad;
+}
+
+/* Add more CSS styles as needed */
+
+.space{
+    line-height: 80px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #e8e8e8;
+}
+
+/*from website*/
+   

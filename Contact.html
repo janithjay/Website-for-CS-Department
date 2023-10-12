@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Computer Science</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="./Contact.css">
+    <link rel="stylesheet" href="https://use.typekit.net/wef2epu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="KDU LOGO NEW.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+    <header>
+        <div class="header-image-container">
+            <img src="LOGO.png" alt="Header Image" class="header-image">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./home.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Programs <i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li><a href="./Computer_Science.html">Computer Science</a></li>
+                        <li><a href="./Software_Engineering.html">Software Engineering</a></li>
+                    </ul>
+                </li>                                            
+                <li><a href="About.html">About us</a></li>
+                <!--li class="drop2">
+                    <a href="#">Staff<i class="fas fa-chevron-down"></i> </a>
+                    <ul class="submenu1">
+                        <li><a href="#">Acadamic Staff</a></li>
+                        <li><a href="#">Non Acadamic Staff</a></li>
+                    </ul-->
+                <li><a href="Contact_us.html">Contact</a></li>
+    
+            </ul>
+        </nav>
+    </header>
+
+    
+    <section>
+        <div class="container">
+            <!--Contact Info Form-->
+            <div class="contactInfo"> 
+                <div>
+                    <h2>Contact Info</h2>
+                    <ul class="info">
+                        <li>
+                            <span class="material-icons-outlined">
+                                place
+                                </span>
+                            <span> 
+                                Department of Computer Science,<br>
+                                General Sir John Kotelawala Defence University,<br>
+                                Kandawala Road,<br>
+                                Rathmalana,<br>
+                                Sri Lanka.
+                                </span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="material-icons-outlined">
+                                email
+                                </span>
+                            <span><a href = "mailto: kdudefence@kdu.ac.lk">kdudefence@kdu.ac.lk</a></span>
+                        </li>
+                        <li>
+                            <span class="material-icons-outlined">
+                                phone
+                                </span>
+                            <span>+94-11-2605715</span>
+                        </li>
+    
+                    </ul>
+                </div>
+                    <ul class="sci">
+                        <li><a href="https://www.facebook.com/KotelawalaDefenceUniversity/" class="fa fa-facebook"></a></a></li>        
+                        <li><a href="https://www.linkedin.com/school/general-sir-john-kotelawala-defence-university/" class="fa fa-linkedin"></a></a></li>
+                        <li><a href="https://www.youtube.com/channel/UC3pp0YuDK7eXDJl6VPArYpA" class="fa fa-youtube"></a></a></li>
+                    </ul>
+            </div>
+            <!--Send A Message Form-->
+                        <!-- Send A Message Form -->
+            <div class="contactForm">
+                <h2>Send a Message</h2>
+                <form action="process_form.php" method="post">
+                    <div class="formBox">
+                        <div class="inputBox w50">
+                            <input type="text" name="first_name" required>
+                            <span>First Name</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="text" name="last_name" required>
+                            <span>Last Name</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="email" name="email" required>
+                            <span>Email Address</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="tel" name="mobile" pattern="[0-9]{10}" required>
+                            <span>Mobile Number</span>
+                        </div>
+                        <div class="inputBox w100">
+                            <textarea name="message" required></textarea>
+                            <span>Write your message here...</span>
+                        </div>
+                        <div class="inputBox w100">
+                            <input type="submit" value="Send">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+            
+    
+        </div>
+    </section>
+    
+    <!-- Map -->
+    <section>
+        <div class="map">
+            <center>
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d507085.5552075392!2d79.28060531616208!3d6.817693717826404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25acc4a4a86e1%3A0x23e8b8390853ca4f!2sGeneral%20Sir%20John%20Kotelawala%20Defence%20University!5e0!3m2!1sen!2slk!4v1696966337989!5m2!1sen!2slk"
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </center>
+        </div>
+    </section>
+
+    <table id="table2" width="100%" class="table-box" style="background-color: #161d85;">
+        <tr style="background-color: #161d85;"> 
+            <td id="details" style=""><br>
+                Contact us <br><br>
+                Department of Computer Science,<br>
+                General Sir John Kotelawala Defence University,<br>
+                Kandawala Road,<br>
+                Rathmalana,<br>
+                Sri Lanka. <br><br><br>
+                +94-11-2605715
+            </td>
+            <td style="color: white; text-align: center;">
+                    <hr>
+                    Our Services<br><br>
+                    Privacy Policy<br><br>
+                    Terms & Condittions
+                    <hr>
+            </td>
+        </tr>
+    </table>
+
+<br>
+<br>
+
+    <footer>
+        &copy; 2023 Department of Computer Science, KDU
+    </footer>
+</body>
+</html>
+

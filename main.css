@@ -1,0 +1,1334 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+* Reset default margin and padding */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Set a background color and text color */
+body {
+    background-color: white;
+    font-family: "montserrat", sans-serif;
+}
+
+/* Header styles */
+header {
+    background-color: #e6f7ff;
+    color: #261d42;
+    text-align: right;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Stack the elements vertically */
+    position: relative; /* Create a stacking context for the header */
+}
+
+.header-image-container {
+    text-align: center;
+}
+
+.header-image {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+}
+
+/* Navigation menu styles */
+nav {
+    background-color: #1a23a1;
+    text-align: center;
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 20px;
+    position: relative; /* Create a stacking context for submenus */
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: normal;
+    display: block;
+    padding: 10px;
+}
+
+/* Styles for the submenu */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position the submenu below the parent */
+    left: 0;
+    background-color: #1d28ca;
+    z-index: 2; /* Ensure the submenu appears above the navigation menu */
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    margin: 0;
+    display: block;
+}
+
+.submenu a {
+    padding: 10px;
+    font-size: 18px;
+}
+
+/* Style the Font Awesome arrow icon */
+nav li.dropdown > a i {
+    margin-left: 5px; /* Add spacing between the text and icon */
+    font-size: 12px; /* Adjust the icon size as needed */
+}
+
+/* Style the submenu items without the arrow */
+nav .submenu a {
+    display: block; /* Display the items as blocks */
+    white-space: nowrap; /* Prevent wrapping to the next line */
+    margin-right: 10px; /* Add spacing between items */
+    text-align: left; /* Align text to the left */
+}
+/* Slider container styles */
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Slider styles */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Slide styles */
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+/* Style for the slider navigation buttons */
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent; /* Make the background transparent */
+    border: none;
+    cursor: pointer;
+    z-index: 3; /* Ensure buttons appear above the slides */
+    width: 50px; /* Adjust the button width as needed */
+    height: 50px; /* Adjust the button height as needed */
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+}
+
+.prev-button {
+    left: 20px;
+    background-image: url('back.png'); /* Replace with your left arrow image URL */
+    width: 50px;
+    height: 50px;
+}
+
+.next-button {
+    right: 20px;
+    background-image: url('right.png'); /* Replace with your right arrow image URL */
+    width: 50px;
+    height: 50px;
+}
+
+/* Style for button hover effect */
+.prev-button:hover,
+.next-button:hover {
+    background-color: rgb(161, 13, 13); /* Add a semi-transparent background color on hover */
+    width: 30px; /* Adjust as needed for smaller screens */
+    height: 30px;
+}
+
+
+
+/* Main content styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(1, 11, 87);
+}
+
+/* CSS for your existing footer styles */
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10001;
+}
+
+
+
+/* Style for the contact info section */
+#contact-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.contact-box {
+    background-color: rgb(43, 43, 186);
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    flex-basis: calc(25% - 20px); /* Set the width for each contact box */
+}
+
+.contact-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-box p {
+    font-size: 16px;
+}
+
+/* Style for the phone icon */
+.contact-box img {
+    width: 32px; /* Adjust the width as needed */
+    height: 32px; /* Adjust the height as needed */
+    margin-bottom: 10px;
+}
+nav {
+    background-color: #000770;
+    text-align: center;
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 20px;
+    position: relative; /* Create a stacking context for submenus */
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: normal;
+    display: block;
+    padding: 10px;
+}
+
+/* Styles for the submenu */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position the submenu below the parent */
+    left: 0;
+    background-color: #000770;
+    z-index: 2; /* Ensure the submenu appears above the navigation menu */
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    margin: 0;
+    display: block;
+}
+
+.submenu a {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.submenu1 {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position the submenu below the parent */
+    left: 0;
+    background-color: #000770;
+    z-index: 2; /* Ensure the submenu appears above the navigation menu */
+}
+
+.drop2:hover .submenu1{
+    display: block;
+}
+
+.submenu1 li {
+    margin: 0;
+    display: block;
+}
+
+.submenu1 a {
+    padding: 18px;
+    font-size: 14px;
+}
+
+/* Style the Font Awesome arrow icon */
+nav li.dropdown > a i {
+    margin-left: 5px; /* Add spacing between the text and icon */
+    font-size: 12px; /* Adjust the icon size as needed */
+}
+
+/* Style the submenu items without the arrow */
+nav .submenu a {
+    display: block; /* Display the items as blocks */
+    white-space: nowrap; /* Prevent wrapping to the next line */
+    margin-right: 10px; /* Add spacing between items */
+    text-align: left; /* Align text to the left */
+}
+
+nav .submenu1 a {
+    display: block; /* Display the items as blocks */
+    white-space: nowrap; /* Prevent wrapping to the next line */
+    margin-right: 10px; /* Add spacing between items */
+    text-align: left; /* Align text to the left */
+}
+
+nav li.drop2 > a i {
+    margin-left: 10px; /* Add spacing between the text and icon */
+    font-size: 12px; /* Adjust the icon size as needed */
+}
+
+
+
+
+/* Reset default margin and padding */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box ;
+
+}
+
+.container {
+    width: 1303px;
+    height: 50vh ;
+    background-image: url("computerscience.png");
+  
+    
+}
+.img_deg{
+    float:right;
+    width: 35%;
+    
+
+}
+.pos_cen{
+    position: sticky;
+    width:98% ;
+}
+
+/* Set a background color and text color */
+body {
+    background-color: rgba(255, 251, 251, 0.548);
+    font-family: "montserrat", sans-serif;
+    
+
+}
+
+/* Header styles */
+header {
+    background-color: #e6f7ff;
+    color: #261d42;
+    text-align: right;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Stack the elements vertically */
+    position: relative; /* Create a stacking context for the header */
+}
+
+/* Navigation menu styles */
+nav {
+    background-color: #000770;
+    text-align: center;
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 20px;
+    position: relative; /* Create a stacking context for submenus */
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: normal;
+    display: block;
+    padding: 10px;
+}
+ul li a:hover{
+    background-color: rgb(142, 143, 153);
+    color: rgb(29, 23, 23);
+    transition: 0.5s;
+}
+
+/* Styles for the submenu */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position the submenu below the parent */
+    left: 0;
+    background-color: #000770;
+    z-index: 2; /* Ensure the submenu appears above the navigation menu */
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    margin: 0;
+    display: block;
+}
+
+.submenu a {
+    padding: 10px;
+    font-size: 18px;
+}
+
+/* Style the Font Awesome arrow icon */
+nav li.dropdown > a i {
+    margin-left: 5px; /* Add spacing between the text and icon */
+    font-size: 12px; /* Adjust the icon size as needed */
+}
+
+/* Style the submenu items without the arrow */
+nav .submenu a {
+    display: block; /* Display the items as blocks */
+    white-space: nowrap; /* Prevent wrapping to the next line */
+    margin-right: 10px; /* Add spacing between items */
+    text-align: left; /* Align text to the left */
+}
+
+
+/* Main content styles */
+h1{
+    font-size: 28px;
+    color: #fff;
+    font-weight: 500;
+}
+h2{
+    font-size: 30px;
+    text-align: left;
+    font-weight: 500;
+    color: black;
+}
+p {
+    
+    font-size: 15px;
+    line-height: 1.5;
+    color: rgb(1, 11, 87);
+    
+}
+p2{
+    color: #060131;
+    font-size:15px ;
+   
+}
+
+p3{
+    color: #cf1010e5;
+    font-size: 20px;   
+}
+p4{
+    color: rgb(22, 12, 77);
+    font-size: 15px;
+    
+}
+button{
+    width: 150px;
+    height: 40px;
+    background-color: #000770;
+    color: #fff;
+    border:2px solid blue;
+}
+button:hover{
+    background-color: transparent;
+    color: #000770;
+}
+.table-box{
+    margin: 5px auto;
+    background-color: #261d42;
+    color: white;
+}
+.table-row{
+    display: table;
+    width: 70%;
+    margin: 2px auto;
+    font-family: sans-serif;
+    background:rgb(232, 232, 238) ;
+    padding: 5px 0;
+    color: #242020;
+    font-size: 5px;
+    box-shadow: 0 1px 4px 0 rgba(o,o,50,0.3);
+
+}
+.table-row1{
+    display: table;
+    width: 70%;
+    margin: 5px auto;
+    font-family: sans-serif;
+    background:rgb(89, 89, 94) ;
+    padding: 5px 0;
+    color: #242020;
+    font-size: 10px;
+    box-shadow: 0 1px 4px 0 rgba(o,o,50,0.3);
+}
+.table-row2{
+    display: table;
+    width: 70%;
+    margin: 5px auto;
+    font-family: sans-serif;
+    background:rgb(180, 180, 184) ;
+    padding: 5px 0;
+    color: #928181;
+    font-size: 10px;
+    box-shadow: 0 1px 4px 0 rgba(o,o,50,0.3);
+}
+
+.table-cell{
+    display: table-cell;
+    width: 10%;
+    text-align: center;
+    padding: 4px 0;
+    border-right:1px solid #ffffff;
+    vertical-align: middle;
+
+}
+
+
+
+/*main styles*/
+/* Reset default margin and padding */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and text color */
+body {
+    background-color: white;
+    font-family: "montserrat", sans-serif;
+}
+
+/* Header styles */
+header {
+    background-color: #e6f7ff;
+    color: #261d42;
+    text-align: right;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Stack the elements vertically */
+    position: relative; /* Create a stacking context for the header */
+}
+
+.header-image-container {
+    text-align: center;
+}
+
+.header-image {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+}
+
+/* Navigation menu styles */
+nav {
+    background-color: #000770;
+    text-align: center;
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 20px;
+    position: relative; /* Create a stacking context for submenus */
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: normal;
+    display: block;
+    padding: 10px;
+}
+
+/* Styles for the submenu */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position the submenu below the parent */
+    left: 0;
+    background-color: #000770;
+    z-index: 100; /* Ensure the submenu appears above the navigation menu */
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    margin: 0;
+    display: block;
+}
+
+.submenu a {
+    padding: 10px;
+    font-size: 18px;
+}
+
+/* Style the Font Awesome arrow icon */
+nav li.dropdown > a i {
+    margin-left: 5px; /* Add spacing between the text and icon */
+    font-size: 12px; /* Adjust the icon size as needed */
+}
+
+/* Style the submenu items without the arrow */
+nav .submenu a {
+    display: block; /* Display the items as blocks */
+    white-space: nowrap; /* Prevent wrapping to the next line */
+    margin-right: 10px; /* Add spacing between items */
+    text-align: left; /* Align text to the left */
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: normal;
+    display: block;
+    padding: 10px;
+}
+/* Slider container styles */
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Slider styles */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Slide styles */
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+/* Style for the slider navigation buttons */
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent; /* Make the background transparent */
+    border: none;
+    cursor: pointer;
+    z-index: 3; /* Ensure buttons appear above the slides */
+    width: 50px; /* Adjust the button width as needed */
+    height: 50px; /* Adjust the button height as needed */
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+}
+
+.prev-button {
+    left: 20px;
+    background-image: url('back.png'); /* Replace with your left arrow image URL */
+    width: 50px;
+    height: 50px;
+}
+
+.next-button {
+    right: 20px;
+    background-image: url('right.png'); /* Replace with your right arrow image URL */
+    width: 50px;
+    height: 50px;
+}
+
+/* Style for button hover effect */
+.prev-button:hover,
+.next-button:hover {
+    background-color: rgb(161, 13, 13); /* Add a semi-transparent background color on hover */
+    width: 30px; /* Adjust as needed for smaller screens */
+    height: 30px;
+}
+
+
+
+/*slider styles*/
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.img-content {
+    width: 100%;
+    display: flex;
+}
+.img-content img {
+    width: 500px;
+}
+.img-content .word{
+    margin-left: 20px;
+    display: block;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+/* Style for the table box */
+.table-box {
+    margin: 20px auto; /* Add spacing around the table */
+    background-color: #261d42; /* Background color for the table */
+    color: white; /* Text color */
+    padding: 20px; /* Add spacing inside the table */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+}
+
+/* Style for table headers */
+.table-box th {
+    background-color: #000770; /* Background color for table headers */
+    color: white; /* Text color for table headers */
+    padding: 10px; /* Add spacing inside table headers */
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Style for table rows */
+.table-box tr {
+    border-bottom: 1px solid #555; /* Add a bottom border to separate rows */
+}
+
+/* Style for table cells (data) */
+.table-box td {
+    padding: 10px; /* Add spacing inside table cells */
+}
+
+/* Style for alternate rows (striped effect) */
+.table-box tr:nth-child(even) {
+    background-color: #000770; /* Background color for even rows */
+}
+/* Add your CSS styles here */
+
+.elementor-section-wrap {
+    margin: 0;
+    padding: 0;
+}
+
+.elementor-section {
+    margin: 0;
+    padding: 0;
+}
+
+.elementor-container {
+    color:black;
+    line-height: 80px;
+    margin: 0;
+    padding: 0;
+}
+
+.elementor-column {
+    margin: 0;
+    padding: 0;
+}
+
+.elementor-widget-wrap {
+    background-image: url('https://foc.kdu.ac.lk/wp-content/uploads/2021/11/foc-4.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   background-size:contain;
+   
+    margin: 0;
+    padding: 0;
+    
+}
+
+.elementor-heading-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.elementor-button-link {
+    text-decoration: none;
+}
+
+.elementor-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.elementor-button:hover {
+    background-color: #005bad;
+}
+
+/* Add more CSS styles as needed */
+
+.space{
+    line-height: 80px;
+}
+
+
+
+/*from website*/
+/*contact */
+
+.container
+{
+    position: relative;
+    min-width: 1100px;
+    min-height: 550px;
+    display: flex;
+    z-index: 1000;
+
+}
+
+.container .contactInfo
+{
+    position: absolute;
+    top: 40px;
+    width: 350px;
+    height: calc(100% - 80px);
+    background: rgb(49, 71, 178);
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 20px 20px 25px rgba(0,0,0,0.15); 
+    border-radius: 22px;
+}
+
+.container .contactInfo h2
+{
+    color: #fff;
+    font-size:24px;
+    font-weight: 500;
+}
+
+.container .contactInfo ul.info 
+{
+   position: relative;
+   margin: 20px 0; 
+}
+
+.container .contactInfo ul.info li
+{
+   position: relative;
+   list-style: none;
+   display: flex;
+   margin: 20px 0;
+   cursor: pointer;
+   align-items: flex-start;
+}
+
+.container .contactInfo ul.info li span:nth-child(1)
+{
+    width: 30px;
+    min-width: 30px;
+}
+
+/* for gmail */
+.container .contactInfo ul.info li span a
+{
+    color: #fff;
+    text-decoration: none;
+    width: 30px;
+    min-width: 30px;
+    
+}
+
+.container .contactInfo ul.info li span:nth-child(1) img
+{
+    max-width: 100%;
+    filter: invert(1);
+}
+
+.container .contactInfo ul.info li span:nth-child(2)
+{
+    color: #fff;
+    margin-left: 10px;
+    font-weight: 300;
+}
+
+.container .contactInfo ul.sci
+{
+    position: relative;
+    display: flex;
+}
+
+.container .contactInfo ul.sci li
+{
+   list-style: none;  
+   margin-right: 15px;
+}
+
+.container .contactInfo ul.sci li a
+{
+   text-decoration: none;
+}
+
+.container .contactInfo ul.sci li a img
+{
+   filter: invert(1);
+}
+
+.container .contactForm
+{
+    position: absolute;
+    padding: 70px 50px;
+    padding-left: 250px;
+    margin-left: 150px;
+    width: calc(100% - 150px);
+    height: 100%;
+    background: #fff; 
+    box-shadow: 0 50px 50px 25px rgba(0,0,0,0.25);
+    border-radius: 22px;
+}
+
+.container .contactForm h2
+{
+    color: #0f3959;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.container .contactForm .formBox
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+.container .contactForm .formBox .inputBox
+{
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.container .contactForm .formBox .inputBox.w50
+{
+    width: 47%;
+}
+
+.container .contactForm .formBox .inputBox.w100
+{
+    width: 100%;
+}
+
+.container .contactForm .formBox .inputBox input,
+.container .contactForm .formBox .inputBox textarea 
+{
+    width: 100%;
+    resize: none;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #777;
+}
+
+.container .contactForm .formBox .inputBox textarea 
+{
+    height: 120px;
+}
+
+.container .contactForm .formBox .inputBox span 
+{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    pointer-events: none;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+.container .contactForm .formBox .inputBox input:focus ~ span,
+.container .contactForm .formBox .inputBox input:valid ~ span,
+.container .contactForm .formBox .inputBox textarea:focus ~ span, 
+.container .contactForm .formBox .inputBox textarea:valid ~ span
+{
+    transform: translateY(-20px);
+    font-size:  12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #cc1111;
+    font-weight: 500;
+} 
+
+/* Css for the submit button */
+.container .contactForm .formBox .inputBox input[type="submit"]         
+{
+    position: relative;
+    cursor: pointer;
+    background: rgb(49, 71, 178);
+    border-radius: 20px;
+    color: #ffffff;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+
+}
+
+.container .contactForm .formBox .inputBox input[type="submit"]:hover{
+    background: #cc1111;
+}
+
+
+/*map container*/
+
+.map{
+    height: 550px;
+    width: 90%;
+    border-radius: 20px;
+}
+/* make the form responsive */
+@media (max-width: 1200px)
+{
+    .container
+    {
+        width: 90%;
+        min-width: auto;
+        margin: 20px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    }
+
+    .container .contactInfo
+    {
+        top: 0;
+        height: 550px;
+        position: relative;
+        box-shadow: none;
+        border-radius: 0px;
+    }
+
+    .container .contactForm
+    {
+        position: relative;
+        width: calc(100% - 350px);
+        padding-left: 0;
+        margin-left: 0;
+        padding: 40px;
+        height: 550px;
+        box-shadow: none;
+        border-radius: 0px;
+    }
+    .map{
+        height: 550px;
+        width: 95%;
+        border-radius: 0px;
+    }
+    .wrapper nav{
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    nav .header .links{
+        margin-left: 30px;
+    }
+    .header .links li a{
+        padding: 8px 13px;
+    }
+    .wrapper .search-box{
+        max-width: calc(100% - 100px);
+    }
+    .wrapper .search-box input{
+        padding: 0 100px 0 15px;
+    }
+    .img-content {
+        width: 100%;
+        display: block;
+        align-items: center;
+    }
+    .img-content img {
+        width: 500px;
+        position: relative;
+        margin-left: 25%;
+    }
+    .img-content .word{
+        margin-left: 20px;
+        display: block;
+        text-align: center;
+    }
+    .img-content .Topics{
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 991px)
+{
+
+    .container
+    {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .container .contactForm
+    {
+        width: 100%;
+        height: auto;
+        border-radius: 0px;
+    }
+
+    .container .contactInfo
+    {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        border-radius: 0px;
+    }
+    .container .contactInfo ul.sci
+    {
+       position: relative;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+    .map{
+        height: 550px;
+        width: 95%;
+        radius: 0px;
+    }
+    .wrapper .menu-icon{
+        display: block;
+    }
+    .wrapper #show-menu:checked ~ .menu-icon i::before{
+        content: "\2716";
+    }
+    nav .header .links{
+        display: block;
+        position: fixed;
+        background-color: rgb(49, 71, 178);
+        box-shadow: 0 20px 50px rgba(255, 255, 255, 0.2);
+        height: 100%;
+        width: 100%;
+        top: 70px;
+        left: -100%;
+        margin-left: 0;
+        max-width: 350px;
+        overflow: auto;
+        padding-bottom: 100px;
+        transition: all 0.3s ease;
+    }
+    nav #show-menu:checked ~ .header .links{
+        left: 0%;
+    }
+    .header .links li{
+        margin: 15px 20px;
+    }
+    .header .links li a,
+    .header .links li label{
+        line-height: 40px;
+        font-size: 20px;
+        display: block;
+        padding: 8px 18px;
+        cursor: pointer;
+    }
+    .header .links li a .desktop-link{
+        display: none;
+    }
+    /* Display dropdown */
+
+    nav .header .dropdown-links {
+        margin-left: 20px;
+        margin-top: 1px;
+        width: 100%; 
+        position: static; 
+        display: none;
+        padding: 0; 
+        opacity: 1; 
+    }
+    .header .links li:hover .dropdown-links {
+        display: block;
+    }
+    
+}
+
+@media (max-width: 600px)
+{
+    .container .contactForm
+    {
+        padding: 25px;
+    }
+
+    .container .contactInfo{
+        padding: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container .contactInfo ul.sci
+    {
+        margin-top: 40px;
+    }
+
+    .container .contactForm .formBox .inputBox.w50
+    {
+        width: 100%;
+    }
+    .map{
+        height: 550px;
+        width: 95%;
+        border-radius: 0px;
+    }
+    
+    
+}
+
